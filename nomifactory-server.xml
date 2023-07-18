@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Nomifactory</Name>
+  <Repository>goobaroo/ftboceanblock</Repository>
+  <Registry>https://hub.docker.com/repository/docker/goobaroo/ftboceanblock</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/spooknik/docker-nomifactory/</Support>
+  <Project>https://www.curseforge.com/minecraft/modpacks/nomifactory</Project>
+  <Overview>Nomifactory (ファクトリーのみ) is a quest-driven expert pack focused on building large-scale factories, where you will put your automation skills to the test as you progress from punching trees to creative-in-survival, climbing the power tiers of GregTech: Community Edition (GTCE) and its extension, Shadows of Greg. No complicated magic systems, no forced combat or exploration: Only Factories!</Overview>
+  <Category>GameServers:</Category>
+  <ExtraSearchTerms>minecraft</ExtraSearchTerms>
+  <Icon>https://media.forgecdn.net/avatars/475/730/637768106795690939.png</Icon>
+  <Labels/>
+  <Config
+      Type="Path"
+      Name="Installed Location"
+      Target="/data"
+      Default="/mnt/user/appdata/nomifactory/"
+      Mode="rw"
+      Description="Path to store the installed server files."
+      Display="always"
+      Required="true"
+      Mask="false">/mnt/user/appdata/nomifactory/</Config>
+  <Config
+      Type="Variable"
+      Name="EULA"
+      Target="EULA"
+      Default="false"
+      Description="Do you agree to the Mojang EULA available at https://account.mojang.com/documents/minecraft_eula? Server will not start without accepting. Set to 'true' to accept."
+      Display="always"
+      Required="true"
+      Mask="false">false</Config>
+  <Config
+      Type="Variable"
+      Name="JVM_OPTS"
+      Target="JVM_OPTS"
+      Default="-Xms2048m -Xmx4096m"
+      Description="Java Options"
+      Display="always"
+      Required="false"
+      Mask="false">-Xms2048m -Xmx4096m</Config>
+  <Config
+      Type="Variable"
+      Name="OPS"
+      Target="OPS"
+      Default=""
+      Description="Comma separated list of players to have op capability"
+      Display="always"
+      Required="false"
+      Mask="false"/>
+  <Config
+      Type="Variable"
+      Name="MOTD"
+      Target="MOTD"
+      Default=""
+      Description="Set the server MOTD"
+      Display="always"
+      Required="false"
+      Mask="false"/>
+  <Config
+      Type="Port"
+      Name="Port"
+      Target="25565"
+      Default="25565"
+      Mode="tcp"
+      Description="Port for the server"
+      Display="always"
+      Required="false"
+      Mask="false">25565</Config>
+  <Config
+      Type="Variable"
+      Name="LEVEL"
+      Target="LEVEL"
+      Default="world"
+      Description="Name of the world directory.  It is usually world."
+      Display="advanced"
+      Required="false"
+      Mask="false">world</Config>
+</Container>
